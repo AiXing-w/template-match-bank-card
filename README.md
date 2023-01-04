@@ -16,3 +16,4 @@ card-ocr.py是预测过程，
 
 # 代码解析
 详细解释：[opencv案例实战——银行卡模式匹配识别](https://blog.csdn.net/DuLNode/article/details/128531516?spm=1001.2014.3001.5502)
+效果演示：[基于opencv图像处理的卡号检测效果演示](https://www.bilibili.com/video/BV1724y1i7ap)
