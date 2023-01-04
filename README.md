@@ -13,3 +13,6 @@ card-ocr.py是预测过程，
 |image|template|chigh|imgshow|
 |--|--|--|--|
 |银行卡的路径|模板所在的路径(文件夹)|适用银行卡的高度|是否显示(设置为True时显示部分中间过程)|
+
+# 代码解析
+详细解释：[opencv案例实战——银行卡模式匹配识别](https://blog.csdn.net/DuLNode/article/details/128531516?spm=1001.2014.3001.5502)
