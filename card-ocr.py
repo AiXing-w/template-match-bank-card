@@ -10,7 +10,7 @@ from utils.matchTemplate import templateMatch
 
 
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--image", help="path to input image", default='./images/credit_card_02.png')
+ap.add_argument("-i", "--image", help="path to input image", default='./images/credit_card_01.png')
 ap.add_argument("-t", "--template", help="path to template OCR-A image", default='./cuted_template')
 ap.add_argument("-high", '--chigh', help="the high of the card", default=200)  # 这里不建议更改
 ap.add_argument("-s", "--imgshow", help="option for image show", default=True)
@@ -55,6 +55,11 @@ if __name__ == '__main__':
     for block in blocks:
         numbers = ""
         img = block.copy()
+        h, w = img.shape[:2]
+        img[:, : w//4] = morphClose(img[:, : w//4], 3, 3, 3)
+        img[:, w // 4:w // 2] = morphClose(img[:, w // 4: w // 2], 3, 3, 3)
+        img[:, : w // 4] = morphClose(img[:, : w // 4], 3, 3, 3)
+        img[:, : w // 4] = morphClose(img[:, : w // 4], 3, 3, 3)
         rects = getRect(img, 0)
         totalRects += rects
         imgs = splitByRect(img, rects)
@@ -70,5 +75,4 @@ if __name__ == '__main__':
 
     drawCard = drawNumbersBack(card, splitNumbers, totalRects, blockRects,0.6)
     cv_show(drawCard, 'card_numbers')
-
 
