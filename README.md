@@ -1,4 +1,4 @@
-# template-match-banck-card
+# template-match-bank-card
 使用opencv-python实现的基于模板匹配的银行卡号识别项目
 # 数据分析与测试过程
 back-card-template-match.ipynb是拿到数据后的分析与算法的测试过程，我们在这里将模板经过处理之后切割成了10个部分，存放到了cuted_template中作为预测时的模板
